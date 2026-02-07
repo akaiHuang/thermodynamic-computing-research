@@ -1,12 +1,18 @@
 # Thermodynamic Computing Research
 
-### TSU vs MCMC Benchmark and P0 Optimization
+### ⚗️ TSU vs MCMC Benchmark and P0 Optimization
 
 Research contributions to Extropic's thermodynamic computing framework (THRML). This repository contains benchmark experiments comparing Thermodynamic Sampling Unit (TSU) simulation against traditional Markov Chain Monte Carlo (MCMC) methods, along with JIT compilation optimizations to the THRML simulator that achieved a measurable 10% speedup on core sampling operations.
 
 ---
 
-## Why This Exists
+## 📋 Quick Summary
+
+> 🔬 **Thermodynamic Computing Research** 是針對 Extropic 熱力學計算框架 THRML 的研究貢獻專案。🌡️ 核心工作包含兩大方向：一是 TSU（熱力學取樣單元）與傳統 MCMC（馬可夫鏈蒙地卡羅）方法的嚴謹基準測試，涵蓋 5 組實驗、13 張視覺化圖表，深入比較收斂速度、分佈品質與平行效率；二是透過 JIT 編譯優化（`@eqx.filter_jit`）加速 THRML 模擬器的 `_run_blocks` 與 `sample_blocks` 核心函式，在 9×9 數獨問題上達成 ⚡ 10% 加速（2.77s → 2.52s）。🧩 附帶實用的問題求解器：數獨求解器與八皇后問題求解器，展示如何將組合最佳化問題映射為熱力學能量景觀。📊 所有實驗皆以 JAX + Matplotlib 在 macOS 上完成，適合對新型計算典範感興趣的研究者與開發者。
+
+---
+
+## 🤔 Why This Exists
 
 Thermodynamic computing represents a paradigm shift in how we approach optimization and sampling problems. Instead of step-by-step serial computation, a Thermodynamic Sampling Unit uses the physics of thermal noise and energy landscapes to find solutions -- millions of probabilistic bits "settling" into optimal configurations simultaneously, the way water finds the lowest point in a landscape.
 
@@ -18,7 +24,7 @@ This research project explores that paradigm through hands-on experimentation:
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
 ```
 thermodynamic-computing-research/
@@ -63,9 +69,9 @@ thermodynamic-computing-research/
 
 ---
 
-## Key Results
+## 📊 Key Results
 
-### P0 JIT Optimization
+### ⚡ P0 JIT Optimization
 
 | Metric | Original | Optimized |
 |--------|----------|-----------|
@@ -75,7 +81,7 @@ thermodynamic-computing-research/
 
 **Important distinction**: This optimization accelerates the THRML *simulator* (software running on CPU), not the TSU hardware itself. It reduces development iteration time. Algorithm-level optimizations (sparsification, early convergence) are the path to improving actual TSU hardware performance.
 
-### Benchmark Experiments (5 Experiments, 13 Charts)
+### 📈 Benchmark Experiments (5 Experiments, 13 Charts)
 
 1. **Node Distribution Comparison** -- TSU vs MCMC sampling distribution fidelity
 2. **Convergence Analysis** -- How quickly each method reaches equilibrium
@@ -85,7 +91,7 @@ thermodynamic-computing-research/
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Component | Technology |
 |-----------|-----------|
@@ -97,7 +103,7 @@ thermodynamic-computing-research/
 
 ---
 
-## Problem Solvers
+## 🧩 Problem Solvers
 
 The `Thermoputer/` directory contains practical demonstrations of thermodynamic computing applied to classical combinatorial problems:
 
@@ -108,7 +114,7 @@ Both solvers include detailed explanations of how each problem maps to a thermod
 
 ---
 
-## Author
+## 👤 Author
 
 **Huang Akai (Kai)**
 Founder @ Universal FAW Labs | Creative Technologist | Ex-Ogilvy | 15+ years experience
