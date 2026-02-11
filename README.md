@@ -10,6 +10,10 @@ Research contributions to Extropic's thermodynamic computing framework (THRML). 
 
 Thermodynamic Computing Research 聚焦於 Extropic 的 THRML 熱力學計算框架，包含基準測試與優化研究。適合研究者用於比較 TSU 與 MCMC 等方法、重現實驗結果，並延伸到 P0 等參數的效能探索。
 
+## About (EN)
+
+Thermodynamic Computing Research contains benchmark and optimization studies for Extropic's THRML framework. It is oriented toward reproducible experiments and comparative evaluation of probabilistic computation methods.
+
 ## 📋 Quick Summary
 
 > 🔬 **Thermodynamic Computing Research** 是針對 Extropic 熱力學計算框架 THRML 的研究貢獻專案。🌡️ 核心工作包含兩大方向：一是 TSU（熱力學取樣單元）與傳統 MCMC（馬可夫鏈蒙地卡羅）方法的嚴謹基準測試，涵蓋 5 組實驗、13 張視覺化圖表，深入比較收斂速度、分佈品質與平行效率；二是透過 JIT 編譯優化（`@eqx.filter_jit`）加速 THRML 模擬器的 `_run_blocks` 與 `sample_blocks` 核心函式，在 9×9 數獨問題上達成 ⚡ 10% 加速（2.77s → 2.52s）。🧩 附帶實用的問題求解器：數獨求解器與八皇后問題求解器，展示如何將組合最佳化問題映射為熱力學能量景觀。📊 所有實驗皆以 JAX + Matplotlib 在 macOS 上完成，適合對新型計算典範感興趣的研究者與開發者。
